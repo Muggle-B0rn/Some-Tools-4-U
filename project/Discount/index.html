@@ -232,9 +232,9 @@ nav a:hover {
                     checkBtn.disabled = true;
                 } 
                 else {
-                    let diff = Math.abs(userGuess - randomNumber);
-                    let isHigh = userGuess > randomNumber;
-                    let hint = "";
+                  const guessedNumber = Number(userGuess);
+                  let diff = Math.abs(guessedNumber - randomNumber);
+                  let isHigh = guessedNumber > randomNumber;
 
                     if (diff <= 5) {
                         hint = isHigh ? "High (Very Close!)" : "Low (Very Close!)";
